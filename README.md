@@ -4,27 +4,6 @@ He realizado un reproductor sencillo en AndroidStudio usando Java.
 
 El codigo Java seria el siguiente: 
 
-import androidx.appcompat.app.AppCompatActivity;
-import android.content.DialogInterface;
-import android.media.AudioManager;
-import android.media.MediaPlayer;
-import android.os.Bundle;
-import android.view.View;
-import android.widget.Button;
-import android.widget.EditText;
-import android.widget.RadioButton;
-import android.widget.RadioGroup;
-import android.widget.Toast;
-
-import java.io.IOException;
-
-public class MainActivity extends AppCompatActivity {
-MediaPlayer mediaOnline;
-Button play, stop, pause, btRewind, btForward;
-RadioButton rbOnline, rbLocal;
-EditText editTextRewind, editTextForward;
-RadioGroup radioGroup;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -184,5 +163,8 @@ RadioGroup radioGroup;
             }
         });
     }}
+
+Resultado: 
+![reproductor](https://user-images.githubusercontent.com/32551746/111337399-5aa5a480-8676-11eb-81d2-89d667701524.png)
 
 
