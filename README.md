@@ -25,7 +25,6 @@ Button play, stop, pause, btRewind, btForward;
 RadioButton rbOnline, rbLocal;
 EditText editTextRewind, editTextForward;
 RadioGroup radioGroup;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,13 +40,10 @@ RadioGroup radioGroup;
         editTextRewind = (EditText) findViewById(R.id.editTextRewind);
         editTextForward = (EditText) findViewById(R.id.editTextForward);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
-
 //Aqui escribimos el código para MediaPlayer para el archivo del audio local
-
         final MediaPlayer mediaLocal;
         mediaLocal = MediaPlayer.create(this, R.raw.dio_rainbow_in_the_dark);
-//A Continuación he creado las clases para los botones de Play, Pause, Stop, Rewind y Forward para que realicen la actividad deseada
-        //Play
+//A Continuación he creado las clases para los botones de Play, Pause, Stop, Rewind y Forward
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
