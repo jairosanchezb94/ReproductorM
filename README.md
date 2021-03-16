@@ -5,7 +5,6 @@ He realizado un reproductor sencillo en AndroidStudio usando Java.
 El codigo Java seria el siguiente: 
 
 import androidx.appcompat.app.AppCompatActivity;
-
 import android.content.DialogInterface;
 import android.media.AudioManager;
 import android.media.MediaPlayer;
@@ -25,6 +24,7 @@ Button play, stop, pause, btRewind, btForward;
 RadioButton rbOnline, rbLocal;
 EditText editTextRewind, editTextForward;
 RadioGroup radioGroup;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
@@ -41,9 +41,11 @@ RadioGroup radioGroup;
         editTextForward = (EditText) findViewById(R.id.editTextForward);
         radioGroup = (RadioGroup) findViewById(R.id.radioGroup);
 //Aqui escribimos el código para MediaPlayer para el archivo del audio local
+
         final MediaPlayer mediaLocal;
         mediaLocal = MediaPlayer.create(this, R.raw.dio_rainbow_in_the_dark);
 //A Continuación he creado las clases para los botones de Play, Pause, Stop, Rewind y Forward
+
         play.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
@@ -112,8 +114,7 @@ RadioGroup radioGroup;
                 }
             }
         });
-        //Rewind
-btRewind.setOnClickListener(new View.OnClickListener() {
+    btRewind.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         if(mediaOnline.isPlaying()){
@@ -130,8 +131,7 @@ btRewind.setOnClickListener(new View.OnClickListener() {
     }
     }
     });
-//Forward
-btForward.setOnClickListener(new View.OnClickListener() {
+    btForward.setOnClickListener(new View.OnClickListener() {
     @Override
     public void onClick(View v) {
         if(mediaOnline.isPlaying()){
@@ -146,9 +146,9 @@ btForward.setOnClickListener(new View.OnClickListener() {
                 int posRewind = mediaLocal.getCurrentPosition() + milisegundoasegundo;
                 mediaLocal.seekTo(posRewind);}
         }
-    }
-});
+    }});
 //Denominamos el String Sond para usar la URL de la canción de la modalidad Online
+
         String Song = "https://www.ivoox.com/ac-dc-highway-to-hell_md_2668571_wp_1.mp3";
         mediaOnline = new MediaPlayer();
         mediaOnline.setAudioStreamType(AudioManager.STREAM_MUSIC);
@@ -183,7 +183,6 @@ btForward.setOnClickListener(new View.OnClickListener() {
                 }
             }
         });
-    }
-}
+    }}
 
 
